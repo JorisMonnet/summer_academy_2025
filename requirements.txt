@@ -1,3 +1,5 @@
 jupyter
 music21
 mido
+tabulate
+python-rtmidi

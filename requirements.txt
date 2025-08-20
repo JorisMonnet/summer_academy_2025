@@ -3,3 +3,7 @@ music21
 mido
 tabulate
 python-rtmidi
+pygame
+librosa
+numpy
+midiutil

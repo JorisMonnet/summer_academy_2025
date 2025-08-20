@@ -4,12 +4,15 @@ This repository contains code skeletons that are available for the summer academ
 
 # How to use this repository:
 
-1. Install Git
+## Prerequisites
+Before you start, make sure you have the following software installed on your computer:
+- [Git](https://git-scm.com/downloads)
+- [Python 3.13 or higher](https://www.python.org/downloads/)
+- A text editor or IDE (e.g., [Visual Studio Code](https://code.visualstudio.com/download), PyCharm, etc.)
+- (Optional) Musescore or Lilypond for displaying sheet music if you are using Music21 for your composition.
+- (Optional) A virtual environment tool (e.g., venv, virtualenv, conda) to manage your Python packages.
 
-You can download [Git](https://git-scm.com/downloads) and follow the installation instructions for your operating
-system.
-
-2. Clone the repository
+1. Clone the repository
 
 Open a terminal or command prompt and run the following command to clone the repository:
 

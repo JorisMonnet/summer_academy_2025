@@ -44,7 +44,7 @@ pip install -r requirements.txt
 5. If you are using Music21 for your composition:
 
 Install [Musescore](https://musescore.org/en/download) or [Lilypond](https://lilypond.org/download.html) and 
-make sure it is in your PATH to display the sheet music.
+make sure it is in your PATH to display sheet music.
 
 ## If you don't have any notions about Computer Science/Music Theory or you need to brush up your skills:
 

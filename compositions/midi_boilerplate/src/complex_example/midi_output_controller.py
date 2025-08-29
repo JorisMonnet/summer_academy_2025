@@ -25,9 +25,6 @@ def prepare_to_output(note_list: NoteList, event_list: EventList) -> list[Messag
     :param note_list: A list of Note objects.
     :param event_list: A list of MidiEvent objects.
     """
-    # print(f'Sending these Notes to the algorithm:\n{note_list}')
-    # print(f'Sending these Events to the algorithm:\n{event_list}')
-
     note_list.filter_erroneous_notes()
 
     if note_list.is_empty():
@@ -121,13 +118,3 @@ class MidiOutputController:
         """
         if self.output_port is not None:
             self.output_port.reset()
-
-    def reset(self) -> None:
-        """
-        Resets the output controller.
-        """
-        print('Output controller reset.')
-        self.close_abruptly()
-        # Put Pedal back up.
-        if self.output_port is not None:
-            self.output_port.send(mido.Message('control_change', control=64, value=0, time=0))

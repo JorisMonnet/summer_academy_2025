@@ -14,8 +14,8 @@ from typing import Union, SupportsIndex, Callable, Tuple
 
 from tabulate import tabulate
 
-from midi_boilerplate.src.data_structures.note import Note
-from midi_boilerplate.src.data_structures.type_aliases import TimeType
+from compositions.midi_boilerplate.src.data_structures.note import Note
+from compositions.midi_boilerplate.src.data_structures.type_aliases import TimeType
 
 MIN_MIDI_PITCH = 0
 MAX_MIDI_PITCH = 127

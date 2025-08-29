@@ -11,9 +11,9 @@ import time
 
 import mido
 
-from midi_boilerplate.src.data_structures.event_list import EventList
-from midi_boilerplate.src.data_structures.note import Note
-from midi_boilerplate.src.data_structures.note_list import NoteList, MAX_MIDI_PITCH
+from compositions.midi_boilerplate.src.data_structures.event_list import EventList
+from compositions.midi_boilerplate.src.data_structures.note import Note
+from compositions.midi_boilerplate.src.data_structures.note_list import NoteList, MAX_MIDI_PITCH
 
 
 class MidiInputController:

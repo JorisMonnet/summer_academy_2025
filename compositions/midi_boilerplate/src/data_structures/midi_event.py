@@ -6,7 +6,7 @@
     joris.monnet@epfl.ch
 
 """
-from midi_boilerplate.src.data_structures.type_aliases import TimeType
+from compositions.midi_boilerplate.src.data_structures.type_aliases import TimeType
 
 
 class MidiEvent:

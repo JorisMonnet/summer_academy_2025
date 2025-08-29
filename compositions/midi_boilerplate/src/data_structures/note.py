@@ -12,7 +12,7 @@
 import json
 from numbers import Number
 
-from midi_boilerplate.src.data_structures.type_aliases import TimeType
+from compositions.midi_boilerplate.src.data_structures.type_aliases import TimeType
 
 
 class Note:

@@ -10,9 +10,9 @@
     Users of the midit library and authors of midit algorithms may poke in these internals at their own risk.
 """
 
-from midi_boilerplate.src.data_structures.event_list import EventList
-from midi_boilerplate.src.data_structures.note_list import NoteList, MAX_MIDI_PITCH, MIN_MIDI_PITCH
-from midi_boilerplate.src.data_structures.pedal_event import SustainPedalEvent
+from compositions.midi_boilerplate.src.data_structures.event_list import EventList
+from compositions.midi_boilerplate.src.data_structures.note_list import NoteList, MAX_MIDI_PITCH, MIN_MIDI_PITCH
+from compositions.midi_boilerplate.src.data_structures.pedal_event import SustainPedalEvent
 
 
 def create_message_list_for_output(note_list: NoteList, event_list: EventList) -> list[dict]:

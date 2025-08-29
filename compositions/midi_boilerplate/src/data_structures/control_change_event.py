@@ -6,8 +6,8 @@
     joris.monnet@epfl.ch
 
 """
-from midi_boilerplate.src.data_structures.midi_event import MidiEvent
-from midi_boilerplate.src.data_structures.type_aliases import TimeType
+from compositions.midi_boilerplate.src.data_structures.midi_event import MidiEvent
+from compositions.midi_boilerplate.src.data_structures.type_aliases import TimeType
 
 
 class ControlChangeEvent(MidiEvent):

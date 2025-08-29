@@ -1,6 +1,6 @@
 import mido
 
-from midi_boilerplate.src.data_structures.note import Note
+from compositions.midi_boilerplate.src.data_structures.note import Note
 
 inputs = mido.get_input_names()
 outputs = mido.get_output_names()

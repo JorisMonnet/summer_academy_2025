@@ -2,8 +2,8 @@ import time
 
 import mido
 
-from midi_boilerplate.src.data_structures.note import Note
-from midi_boilerplate.src.data_structures.note_list import NoteList
+from compositions.midi_boilerplate.src.data_structures.note import Note
+from compositions.midi_boilerplate.src.data_structures.note_list import NoteList
 
 if __name__ == "__main__":
     outputs = mido.get_output_names()

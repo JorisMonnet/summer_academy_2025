@@ -11,8 +11,8 @@ import logging
 import mido
 from mido.midifiles.midifiles import DEFAULT_TEMPO, DEFAULT_TICKS_PER_BEAT
 
-from midi_boilerplate.src.data_structures.note import Note
-from midi_boilerplate.src.data_structures.note_list import NoteList
+from compositions.midi_boilerplate.src.data_structures.note import Note
+from compositions.midi_boilerplate.src.data_structures.note_list import NoteList
 
 log = logging.getLogger(__name__)
 

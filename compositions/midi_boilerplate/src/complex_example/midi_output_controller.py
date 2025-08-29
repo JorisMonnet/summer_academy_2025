@@ -13,9 +13,9 @@ import mido
 from mido.messages import Message
 from tabulate import tabulate
 
-from midi_boilerplate.src.data_structures.event_list import EventList
-from midi_boilerplate.src.data_structures.note_list import NoteList
-from midi_boilerplate.src.utils.utilities import create_message_list_with_absolute_times, \
+from compositions.midi_boilerplate.src.data_structures.event_list import EventList
+from compositions.midi_boilerplate.src.data_structures.note_list import NoteList
+from compositions.midi_boilerplate.src.utils.utilities import create_message_list_with_absolute_times, \
     prepare_message_list_for_output
 
 

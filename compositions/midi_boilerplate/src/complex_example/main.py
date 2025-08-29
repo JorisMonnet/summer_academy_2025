@@ -2,11 +2,10 @@ import time
 
 import mido
 
-from midi_boilerplate.src.complex_example.midi_input_controller import MidiInputController
-from midi_boilerplate.src.complex_example.midi_output_controller import MidiOutputController
-from midi_boilerplate.src.data_structures.event_list import EventList
-from midi_boilerplate.src.data_structures.note import Note
-from midi_boilerplate.src.data_structures.note_list import NoteList
+from compositions.midi_boilerplate.src.complex_example.midi_input_controller import MidiInputController
+from compositions.midi_boilerplate.src.complex_example.midi_output_controller import MidiOutputController
+from compositions.midi_boilerplate.src.data_structures.event_list import EventList
+from compositions.midi_boilerplate.src.data_structures.note_list import NoteList
 
 
 def transform_note_list(nl: NoteList, el: EventList) -> tuple[NoteList, EventList]:

@@ -1,37 +1,68 @@
-import sys
+import mido
 
+from workshop1.temperament_boilerplate.pitch_bend_utilities import apply_temperament_major_ji
 
-def save_midi_file(data_to_save: bytes, output_file: str) -> None:
-    """
-    Save the modified MIDI data to a file.
+JI_MAJOR = [
+    1 / 1,
+    9 / 8,
+    5 / 4,
+    4 / 3,
+    3 / 2,
+    5 / 3,
+    15 / 8,
+    2 / 1
+]
 
-    :param data_to_save: The MIDI data to save.
-    :param output_file: The path to the output file.
-    """
-    with open(output_file, 'wb') as f:
-        f.write(data_to_save)
-    print(f"MIDI file saved to {output_file}")
+ET_MAJOR = [
+    1 / 1,
+    2 ** (2 / 12),
+    2 ** (4 / 12),
+    2 ** (5 / 12),
+    2 ** (7 / 12),
+    2 ** (9 / 12),
+    2 ** (11 / 12),
+    2 / 1
+]
 
+PYTHAGOREAN_MAJOR = [
+    1 / 1,
+    9 / 8,
+    81 / 64,
+    4 / 3,
+    3 / 2,
+    27 / 16,
+    243 / 128,
+    2 / 1
+]
 
-def change_temperament(data) -> bytes:
-    """
-    Change the temperament of a MIDI file.
+SEMITONE_TO_DEGREE_MAJOR = {
+    0: 0,
+    2: 1,
+    4: 2,
+    5: 3,
+    7: 4,
+    9: 5,
+    11: 6,
+}
 
-    :param data: The MIDI data to modify, as bytes.
-    :return: The modified MIDI data as bytes.
-    """
-    return data
-
+SEMITONE_TO_DEGREE_MINOR = {
+    0: 0,
+    2: 1,
+    3: 2,
+    5: 3,
+    7: 4,
+    8: 5,
+    10: 6,
+}
 
 if __name__ == "__main__":
-    print("This script is a boilerplate for changing the temperament of MIDI files.")
-    input_file_name = sys.argv[1] if len(sys.argv) > 1 else "input.mid"
-    output_file_name = sys.argv[2] if len(sys.argv) > 2 else "output.mid"
-    print(f"Input file: {input_file_name}, Output file: {output_file_name}")
+    input_path = "c_maj.mid"
+    output_path = "output_et_major_C3.mid"
+    tonic = 48  # C3
 
-    with open(input_file_name, 'rb') as f:
-        midi_data = f.read()
-
-    transformed_midi_data = change_temperament(midi_data)
-
-    save_midi_file(transformed_midi_data, output_file_name)
+    tuned_mid = apply_temperament_major_ji(mido.MidiFile(input_path),
+                                           tonic_note=tonic,
+                                           semitone_to_degree=SEMITONE_TO_DEGREE_MAJOR,
+                                           temperament=JI_MAJOR)
+    tuned_mid.save(output_path)
+    print(f"Saved tuned MIDI to {output_path}")
